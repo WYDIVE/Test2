@@ -1,0 +1,80 @@
+*{
+	outline:none;
+}
+.show {
+	border: 1px dotted skyblue !important;
+}
+
+body {
+	font-size: 12px !important;
+	font-family: Arial !important;
+}
+
+
+a {
+	color: #999;
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #C40000;
+}
+.caption {
+	border: 1px solid blue;
+	width: 380px;
+	margin:45px 35%;
+}
+
+.login {
+	width: 300px;
+	text-align: center;
+	margin: 0px 40px;
+}
+
+.su {
+	width: 300px;
+}
+
+.foot {
+	display: block;
+	text-align: right;
+}
+
+.formbox {
+	margin-top: 20px;
+}
+.navigatorDiv{
+	height:100px;
+	line_height:100px;
+}
+nav.top{
+	background-color: #f2f2f2;
+	padding:5px 0px;
+	border: 1px solid #e7e7e7;
+}
+nav.span nav.a{
+	color:#999;
+	margin:0px 15px;
+}
+nav.top a:hover{
+	color:#C40000;
+	text-decoration: none;
+}
+nav.top span.leftmsg{
+	margin-left: 20px;
+}
+
+div.worklog{
+	margin: 5px 200px;
+	background-color: blue;
+	color:white;
+	padding: 10px;
+	text-align: center;
+}
+div.worknav{
+	margin-bottom: 5px;	
+}
+.pageDiv{
+	text-align: center;
+	
+}

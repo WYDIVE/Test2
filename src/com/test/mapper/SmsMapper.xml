@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+              "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <mapper namespace="com.test.mapper.SmsMapper">
+               
+         <resultMap id="ResultSms" type="Sms">
+         <id column="id" property="id" /> 
+         <result column="uid" property="uid" />     
+         <result column="suid" property="suid" />
+          <result column="message" property="message" /> 
+          <result column="sendtime" property="sendtime" /> 
+          <result column="isread" property="isread" /> 
+          <association javaType="User" property="user" column="uid" select="selectuser" ></association>
+          <association javaType="User" property="user" column="suid" select="selectuser" ></association>
+        </resultMap>
+        
+        <select id="selectuser" resultType="User">
+        select * from user where id=#{uid}
+        </select>
+        
+        <select id="msgAll" resultMap="ResultSms">
+        select * from sms order by id desc
+        </select>
+        
+        <select id="smslist" parameterType="Integer" resultType="Sms">
+        select * from sms where suid=#{uid} order by id desc
+        </select>
+        <insert id="smsave" parameterType="Sms" >
+        insert into sms(id,uid,suid,message,sendtime) values(#{id},#{uid},#{suid},#{message},#{sendtime})
+        </insert>
+       </mapper>
